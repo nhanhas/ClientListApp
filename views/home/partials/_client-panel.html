@@ -1,0 +1,58 @@
+<div class="home-client-panel">
+    <!-- Close popup button -->
+    <div class="home-client-panel-close-btn-container color-gray" ng-click="showPanel()">
+        <span><i class="fa fa-times-thin fa-3x"></i></span>
+    </div>
+
+    <!-- Main content -->
+    <div class="home-client-container">
+        <!-- Title -->
+        <h1>Detalhes</h1>
+        
+        <!-- Client data -->
+        <div class="row">
+            
+            <!-- name -->
+            <div class="col-xs-6">
+                <label>Nome</label>
+                <br>
+                <span>{{ view.selectedClient.name }}</span>
+            </div>
+            
+            <!-- email -->
+            <div class="col-xs-6">
+                <label>E-mail</label>
+                <br>
+                <span>{{ view.selectedClient.email }}</span>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+            <!-- address -->
+            <div class="col-xs-6">
+                <label>Morada</label>
+                <br>
+                <span>{{ view.selectedClient.address }}</span>
+            </div>
+            
+            <!-- phone -->
+            <div class="col-xs-6">
+                <label>Telemóvel</label>
+                <br>
+                <span>{{ view.selectedClient.phone }}</span>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Comments -->
+        <div class="home-client-panel-comments-container">
+            <h4>Comentários</h4>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,41 +1,46 @@
-<!-- Search Bar -->
-<div class="search-bar">
+<!-- Home content -->
+<div ng-if="!view.clientPanelOpened">
+  <!-- Search Bar -->
+  <div class="search-bar">
 
-    <div class="search-bar-container">
-      <!-- icon -->
-      <div class="search-bar-icon"><span><i class="fa fa-search fa-2x"></i></span></div>
-      
-      <!-- input -->
-      <input placeholder="Pesquise por cliente" ng-model="view.searchExpression">
-  
-      <!-- clear -->
-      <div class="search-bar-clear" ng-if="view.searchExpression !== ''" ng-click="view.searchExpression = ''">
-        <span><i class="fa fa-times-circle-o fa-2x"></i></span>
-      </div>
-  
-    </div>
-
-    <!-- When we are searching -->
-    <div class="search-context-container" ng-if="view.searchExpression !== ''">    
-      <span>itens contendo &nbsp;</span> 
-      <span><strong>{{ view.searchExpression }}</strong></span>    
-    </div>
+      <div class="search-bar-container">
+        <!-- icon -->
+        <div class="search-bar-icon"><span><i class="fa fa-search fa-2x"></i></span></div>
+        
+        <!-- input -->
+        <input placeholder="Pesquise por cliente" ng-model="view.searchExpression">
     
-</div>
+        <!-- clear -->
+        <div class="search-bar-clear" ng-if="view.searchExpression !== ''" ng-click="view.searchExpression = ''">
+          <span><i class="fa fa-times-circle-o fa-2x"></i></span>
+        </div>
+    
+      </div>
+
+      <!-- When we are searching -->
+      <div class="search-context-container" ng-if="view.searchExpression !== ''">    
+        <span>itens contendo &nbsp;</span> 
+        <span><strong>{{ view.searchExpression }}</strong></span>    
+      </div>
+      
+  </div>
 
 
-<!-- Main Content -->
-<div class="home">
+  <!-- Main Content -->
+  <div class="home">
 
-  <!-- client list -->
-  <div class="home-client-list-container">
+    <!-- client list -->
+    <div class="home-client-list-container">
 
-    <div class="home-client-item" ng-repeat="client in view.clientList | filter: view.searchExpression">
-      <client-tile client="client"></client-tile>
+      <div class="home-client-item" ng-repeat="client in view.clientList | filter: view.searchExpression">
+        <client-tile client="client" on-press="onPressClientHandler(client)"></client-tile>
+      </div>
+
     </div>
 
   </div>
-
 </div>
 
+<!-- Client Panel -->
+<div ng-include="'/views/home/partials/_client-panel.html'" ng-if="view.clientPanelOpened"></div>
 

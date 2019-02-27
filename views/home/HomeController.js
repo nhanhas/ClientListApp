@@ -1,5 +1,5 @@
 app
-.controller('HomeController', ['$scope', '$location','$q', 'AppService', function($scope, $location, $q , AppService) { 
+.controller('HomeController', ['$scope', '$location','$q', '$timeout', 'AppService', function($scope, $location, $q , $timeout, AppService) { 
 	
 	/**
 	 * Controller variables
@@ -7,7 +7,9 @@ app
 	$scope.view = {
 		isLoading : true,
 		searchExpression : '',
-		clientList : []
+		selectedClient : undefined,
+		clientList : [],
+		clientPanelOpened : false
 	};
 
 
@@ -68,6 +70,47 @@ app
 
 		});
 	};
+
+
+	/**
+	 * Behaviour functions
+	 */
+	//#A - Allow to show/hide panels (param <panel> = undefined, will close all)
+	$scope.showPanel = function(panel){
+		//#1 - First we reset all 'Opened' flags
+		$scope.view.clientPanelOpened = false;
+		
+		//#2 - Set visible the requested panel
+		switch (panel) {
+			//#i - Client information panel
+			case 'client-info':
+				$scope.view.clientPanelOpened = true;
+				break;		
+		}
+
+	}
+	//#A - When a client is clicked
+	$scope.onPressClientHandler = function(client){
+		
+		//#1 - Prepare client parameter to request
+		let clientParameter = { id : client.id };
+
+		//#1 - Call Server to get client info
+		return AppService.HOME_getClientInfo( clientParameter ).then((result)=>{		
+			//#2 - If we got client info
+			if(result && result.data){
+				//#2.1 - Show it				
+				$timeout(()=>{
+					$scope.view.selectedClient = result.data;
+					$scope.showPanel('client-info');
+				})		
+				
+			}
+			
+		});
+		
+	};
+
 
 	//#1 - Load Application Data from Server
 	$scope.initialize();
