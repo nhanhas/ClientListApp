@@ -32,304 +32,377 @@ app.service('AppService', ['$http', 'FrameworkUtils', function($http, FrameworkU
                 "name": "Diego Fernando Rodríguez Aguilar",
                 "email": "diego.photogo@gmail.com ",
                 "morada": "",
-                "phone": ""
+                "phone": "",
+                "commentList" : [
+                    {
+                        "id" : "1",
+                        "author" : "Miguel Pereia",
+                        "date" : "20-10-2018",
+                        "text" : "First Comment"
+                    },
+                    {
+                        "id" : "2",
+                        "author" : "Miguel Pereia",
+                        "date" : "22-10-2018",
+                        "text" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
+                    },
+                    {
+                        "id" : "3",
+                        "author" : "Miguel Pereia",
+                        "date" : "24-10-2018",
+                        "text" : "Third Comment"
+                    },
+                    {
+                        "id" : "4",
+                        "author" : "Miguel Pereia",
+                        "date" : "26-10-2018",
+                        "text" : "Fourth Comment"
+                    },
+                    {
+                        "id" : "5",
+                        "author" : "Miguel Pereia",
+                        "date" : "30-10-2018",
+                        "text" : "Fifth Comment"
+                    }
+                ]
             },
             {
                 "id": "48",
                 "name": "Lucile Verton",
                 "email": "",
                 "morada": "",
-                "phone": ""
+                "phone": "",
+                "commentList" : [],
             },
             {
                 "id": "47",
                 "name": "Ruy Uhrbano",
                 "email": "mfurbano@gmail.com",
                 "morada": "",
-                "phone": "964397968"
+                "phone": "964397968",
+                "commentList" : []
             },
             {
                 "id": "46",
                 "name": "Maria das Dores Folque",
                 "email": "doresfolque@sapo.pt",
                 "morada": "",
-                "phone": "914937996"
+                "phone": "914937996",
+                "commentList" : []
             },
             {
                 "id": "45",
                 "name": "Miguel Cabral",
                 "email": "",
                 "morada": "",
-                "phone": ""
+                "phone": "",
+                "commentList" : []
             },
             {
                 "id": "44",
                 "name": "Domingos Folque Guimarães",
                 "email": "",
                 "morada": "",
-                "phone": ""
+                "phone": "",
+                "commentList" : []
             },
             {
                 "id": "43",
                 "name": "Pedro Morais ",
                 "email": "",
                 "morada": "",
-                "phone": ""
+                "phone": "",
+                "commentList" : []
             },
             {
                 "id": "42",
                 "name": "José Ferreira",
                 "email": "zemiguelaf@gmail.com",
                 "morada": "",
-                "phone": "914594262"
+                "phone": "914594262",
+                "commentList" : []
             },
             {
                 "id": "41",
                 "name": "Tiago Pessoa",
                 "email": "",
                 "morada": "",
-                "phone": ""
+                "phone": "",
+                "commentList" : []
             },
             {
                 "id": "40",
                 "name": "Bruno Matos",
                 "email": "brdesign@gmail.com",
                 "morada": "",
-                "phone": "964261847"
+                "phone": "964261847",
+                "commentList" : []
             },
             {
                 "id": "39",
                 "name": "António Braga",
                 "email": "ajcbragafreetime@gmail.com",
                 "morada": "",
-                "phone": "917312602"
+                "phone": "917312602",
+                "commentList" : []
             },
             {
                 "id": "38",
                 "name": "Angelica Barros",
                 "email": "angelica-barros@live.com",
                 "morada": "",
-                "phone": "937813828"
+                "phone": "937813828",
+                "commentList" : []
             },
             {
                 "id": "37",
                 "name": "Celma de Almeida",
                 "email": "",
                 "morada": "",
-                "phone": ""
+                "phone": "",
+                "commentList" : []
             },
             {
                 "id": "36",
                 "name": "Alexandra Ann",
                 "email": "",
                 "morada": "",
-                "phone": ""
+                "phone": "",
+                "commentList" : []
             },
             {
                 "id": "35",
                 "name": "Ingrid Schild",
                 "email": "",
                 "morada": "",
-                "phone": ""
+                "phone": "",
+                "commentList" : []
             },
             {
                 "id": "34",
                 "name": "Jeremias Antunes",
                 "email": "",
                 "morada": "",
-                "phone": ""
+                "phone": "",
+                "commentList" : []
             },
             {
                 "id": "33",
                 "name": "Maria das Dores Folque",
                 "email": "",
                 "morada": "",
-                "phone": ""
+                "phone": "",
+                "commentList" : []
             },
             {
                 "id": "32",
                 "name": "Jorge Pinho",
                 "email": "",
                 "morada": "",
-                "phone": ""
+                "phone": "",
+                "commentList" : []
             },
             {
                 "id": "31",
                 "name": "João Espiga D'Almeida",
                 "email": "",
                 "morada": "",
-                "phone": ""
+                "phone": "",
+                "commentList" : []
             },
             {
                 "id": "30",
                 "name": "João Sanches",
                 "email": "",
                 "morada": "",
-                "phone": ""
+                "phone": "",
+                "commentList" : []
             },
             {
                 "id": "29",
                 "name": "Luis Cumbrera",
                 "email": "",
                 "morada": "",
-                "phone": ""
+                "phone": "",
+                "commentList" : []
             },
             {
                 "id": "28",
                 "name": "Ricardo Drago",
                 "email": "",
                 "morada": "",
-                "phone": "0"
+                "phone": "0",
+                "commentList" : []
             },
             {
                 "id": "27",
                 "name": "Nuno Constantino",
                 "email": "",
                 "morada": "",
-                "phone": "0"
+                "phone": "0",
+                "commentList" : []
             },
             {
                 "id": "26",
                 "name": "Ricardo Mota",
                 "email": "",
                 "morada": "",
-                "phone": "0"
+                "phone": "0",
+                "commentList" : []
             },
             {
                 "id": "25",
                 "name": "Francis Lacour",
                 "email": "",
                 "morada": "",
-                "phone": "0"
+                "phone": "0",
+                "commentList" : []
             },
             {
                 "id": "24",
                 "name": "Carlos Nóbrega",
                 "email": "",
                 "morada": "",
-                "phone": "0"
+                "phone": "0",
+                "commentList" : []
             },
             {
                 "id": "23",
                 "name": "João Valle e Azevedo",
                 "email": "",
                 "morada": "",
-                "phone": "0"
+                "phone": "0",
+                "commentList" : []
             },
             {
                 "id": "22",
                 "name": "Nuno Cabral",
                 "email": "",
                 "morada": "",
-                "phone": "0"
+                "phone": "0",
+                "commentList" : []
             },
             {
                 "id": "21",
                 "name": "Marcelo Bittencourt",
                 "email": "",
                 "morada": "",
-                "phone": "0"
+                "phone": "0",
+                "commentList" : []
             },
             {
                 "id": "20",
                 "name": "Jose Antonio Vargas Lleras",
                 "email": "",
                 "morada": "",
-                "phone": "0"
+                "phone": "0",
+                "commentList" : []
             },
             {
                 "id": "19",
                 "name": "David Leigh-Howarth",
                 "email": "",
                 "morada": "",
-                "phone": "0"
+                "phone": "0",
+                "commentList" : []
             },
             {
                 "id": "18",
                 "name": "Sandro Marcos",
                 "email": "",
                 "morada": "",
-                "phone": "0"
+                "phone": "0",
+                "commentList" : []
             },
             {
                 "id": "17",
                 "name": "Rafael Paixão",
                 "email": "",
                 "morada": "",
-                "phone": "0"
+                "phone": "0",
+                "commentList" : []
             },
             {
                 "id": "16",
                 "name": "Javier Sabater",
                 "email": "",
                 "morada": "",
-                "phone": "0"
+                "phone": "0",
+                "commentList" : []
             },
             {
                 "id": "15",
                 "name": "Renato Ribeiro",
                 "email": "",
                 "morada": "",
-                "phone": "0"
+                "phone": "0",
+                "commentList" : []
             },
             {
                 "id": "14",
                 "name": "Andre Porcaro",
                 "email": "",
                 "morada": "",
-                "phone": "0"
+                "phone": "0",
+                "commentList" : []
             },
             {
                 "id": "13",
                 "name": "Maxime Senseby",
                 "email": "",
                 "morada": "",
-                "phone": "0"
+                "phone": "0",
+                "commentList" : []
             },
             {
                 "id": "12",
                 "name": "Christophe Maincourt",
                 "email": "",
                 "morada": "",
-                "phone": "0"
+                "phone": "0",
+                "commentList" : []
             },
             {
                 "id": "11",
                 "name": "Teun Hilte",
                 "email": "",
                 "morada": "",
-                "phone": "0"
+                "phone": "0",
+                "commentList" : []
             },
             {
                 "id": "9",
                 "name": "Rosário",
                 "email": "",
                 "morada": "",
-                "phone": "0"
+                "phone": "0",
+                "commentList" : []
             },
             {
                 "id": "8",
                 "name": "Rui Andrade",
                 "email": "",
                 "morada": "",
-                "phone": "0"
+                "phone": "0",
+                "commentList" : []
             },
             {
                 "id": "7",
                 "name": "Frederic Corre",
                 "email": "frederic.corre@axa-groupsolutions.com",
                 "morada": "",
-                "phone": "0"
+                "phone": "0",
+                "commentList" : []
             },
             {
                 "id": "6",
                 "name": "João Batalha",
                 "email": "joao.batalha@gmail.com",
                 "morada": "",
-                "phone": "912202013"
+                "phone": "912202013",
+                "commentList" : []
             }
         ];
-
         return new Promise(function(resolve, reject) {
             setTimeout(function() {
 

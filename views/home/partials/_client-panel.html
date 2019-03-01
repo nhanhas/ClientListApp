@@ -51,10 +51,11 @@
         <!-- Comments -->
         <div class="home-client-panel-comments-container">
             <h4>Comentários</h4>
-            
-            <div class="home-client-item" ng-repeat="">
-                
+            <hr style="margin-bottom: 0;">
+            <div class="home-client-item" ng-repeat="comment in view.selectedClient.commentList">
+                <comment-tile comment="comment"></comment-tile>                
             </div>
+            <div class="home-client-empty-comments" ng-if="view.selectedClient.commentList.length === 0">Não existem comentários</div>
     
         </div>
 

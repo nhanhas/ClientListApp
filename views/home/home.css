@@ -71,6 +71,11 @@
     top: 5px;
     right: 20px;
 }
+.home-client-empty-comments{
+	text-align: center;
+	color: #d4d1d1;
+	margin-top: 30px;
+}
 .home-client-panel-comments-container{
 	padding-bottom: 55px;
 }

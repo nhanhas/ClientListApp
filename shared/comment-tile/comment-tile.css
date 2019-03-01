@@ -1,0 +1,16 @@
+.comment-tile{
+    padding: 20px;
+    border-bottom: 1px solid #e4e4e4;
+}
+.comment-tile-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: gray;
+}
+.comment-tile-name{
+    font-weight: bold;
+    font-size: 16px;
+}

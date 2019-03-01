@@ -84,6 +84,8 @@ app
 		//#1.1 - Clear comment
 		$scope.view.commentText = '';
 		
+		scroll(0,0);
+
 		//#2 - Set visible the requested panel
 		switch (panel) {
 			//#i - Client information panel
