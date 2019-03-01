@@ -7,6 +7,7 @@ app
 	$scope.view = {
 		isLoading : true,
 		searchExpression : '',
+		commentText : '',
 		selectedClient : undefined,
 		clientList : [],
 		clientPanelOpened : false
@@ -47,8 +48,8 @@ app
 			console.log(result);
 
 			//#2 - Process result
-			if(result && result.data){
-				let listOfClients = result.data;
+			if(result){
+				let listOfClients = result;
 								
 				//#3 - Iterate list to prepare to show
 				listOfClients.forEach((client)=>{
@@ -79,6 +80,9 @@ app
 	$scope.showPanel = function(panel){
 		//#1 - First we reset all 'Opened' flags
 		$scope.view.clientPanelOpened = false;
+
+		//#1.1 - Clear comment
+		$scope.view.commentText = '';
 		
 		//#2 - Set visible the requested panel
 		switch (panel) {
@@ -111,6 +115,13 @@ app
 		
 	};
 
+	//#B - When Send comment is clicked
+	$scope.submitComment = function(client, commentary){
+		//#1 - Send TODO
+
+		//#2 - Clear comment
+		$scope.view.commentText = '';
+	}
 
 	//#1 - Load Application Data from Server
 	$scope.initialize();

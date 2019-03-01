@@ -5,7 +5,7 @@
 app.service('AppService', ['$http', 'FrameworkUtils', function($http, FrameworkUtils) {
 
     //App Service URL  
-    this.serviceWS = 'http://localhost';
+    this.serviceWS = 'http://platform.folques.com/platform/api';
 
     /********************************************************************************
      * Home
@@ -16,81 +16,9 @@ app.service('AppService', ['$http', 'FrameworkUtils', function($http, FrameworkU
      * It is a GET 
      */
     this.HOME_getAllClients  = function(){
-        let clientsList = [
-            {
-                id : 1,
-                name : 'Miguel Pereira',
-                email : 'mp@ht.com',
-                address : 'Lisboa',
-                phone : '912231234'
-            },
-            {
-                id : 2,
-                name : 'Jõao Batalha',
-                email : 'jb@ht.com',
-                address : 'Oeiras',
-                phone : '914443234'
-            },
-            {
-                id : 3,
-                name : 'Gilberta Dias',
-                email : 'gd@ht.com',
-                address : 'Azeitão',
-                phone : '914422234'
-            },
-            {
-                id : 4,
-                name : 'Rui Pereira',
-                email : '32@ht.com',
-                address : 'Lisboa',
-                phone : '912231234'
-            },
-            {
-                id : 5,
-                name : 'Miguel Mota',
-                email : 'dd@ht.com',
-                address : 'Oeiras',
-                phone : '914443234'
-            },
-            {
-                id : 6,
-                name : 'Lopes Gonga',
-                email : 'sad@ht.com',
-                address : 'Azeitão',
-                phone : '914422234'
-            },
-            {
-                id : 7,
-                name : 'Quasimodo Soares',
-                email : 'mgap@ht.com',
-                address : 'Lisboa',
-                phone : '912231234'
-            },
-            {
-                id : 8,
-                name : 'Denise Teixeira',
-                email : 'jbhsd@ht.com',
-                address : 'Oeiras',
-                phone : '914443234'
-            },
-            {
-                id : 9,
-                name : 'Pereira da Cunha',
-                email : 'gsdd@ht.com',
-                address : 'Azeitão',
-                phone : '914422234'
-            },
-        ];
-
-        return new Promise(function(resolve, reject) {
-            setTimeout(function() {
-                resolve( {data : clientsList} );
-            });
-        });
-
         //Use the code below
 
-        let serviceURL = this.serviceWS + '/getAllClients';
+        let serviceURL = this.serviceWS + '/getClients';
 
         return FrameworkUtils.Http_GET(serviceURL).then(function(result){     
             return result.data;
@@ -100,68 +28,306 @@ app.service('AppService', ['$http', 'FrameworkUtils', function($http, FrameworkU
     this.HOME_getClientInfo  = function(clientParameter){
         let clientsList = [
             {
-                id : 1,
-                name : 'Miguel Pereira',
-                email : 'mp@ht.com',
-                address : 'Lisboa',
-                phone : '912231234'
+                "id": "49",
+                "name": "Diego Fernando Rodríguez Aguilar",
+                "email": "diego.photogo@gmail.com ",
+                "morada": "",
+                "phone": ""
             },
             {
-                id : 2,
-                name : 'Jõao Batalha',
-                email : 'jb@ht.com',
-                address : 'Oeiras',
-                phone : '914443234'
+                "id": "48",
+                "name": "Lucile Verton",
+                "email": "",
+                "morada": "",
+                "phone": ""
             },
             {
-                id : 3,
-                name : 'Gilberta Dias',
-                email : 'gd@ht.com',
-                address : 'Azeitão',
-                phone : '914422234'
+                "id": "47",
+                "name": "Ruy Uhrbano",
+                "email": "mfurbano@gmail.com",
+                "morada": "",
+                "phone": "964397968"
             },
             {
-                id : 4,
-                name : 'Rui Pereira',
-                email : '32@ht.com',
-                address : 'Lisboa',
-                phone : '912231234'
+                "id": "46",
+                "name": "Maria das Dores Folque",
+                "email": "doresfolque@sapo.pt",
+                "morada": "",
+                "phone": "914937996"
             },
             {
-                id : 5,
-                name : 'Miguel Mota',
-                email : 'dd@ht.com',
-                address : 'Oeiras',
-                phone : '914443234'
+                "id": "45",
+                "name": "Miguel Cabral",
+                "email": "",
+                "morada": "",
+                "phone": ""
             },
             {
-                id : 6,
-                name : 'Lopes Gonga',
-                email : 'sad@ht.com',
-                address : 'Azeitão',
-                phone : '914422234'
+                "id": "44",
+                "name": "Domingos Folque Guimarães",
+                "email": "",
+                "morada": "",
+                "phone": ""
             },
             {
-                id : 7,
-                name : 'Quasimodo Soares',
-                email : 'mgap@ht.com',
-                address : 'Lisboa',
-                phone : '912231234'
+                "id": "43",
+                "name": "Pedro Morais ",
+                "email": "",
+                "morada": "",
+                "phone": ""
             },
             {
-                id : 8,
-                name : 'Denise Teixeira',
-                email : 'jbhsd@ht.com',
-                address : 'Oeiras',
-                phone : '914443234'
+                "id": "42",
+                "name": "José Ferreira",
+                "email": "zemiguelaf@gmail.com",
+                "morada": "",
+                "phone": "914594262"
             },
             {
-                id : 9,
-                name : 'Pereira da Cunha',
-                email : 'gsdd@ht.com',
-                address : 'Azeitão',
-                phone : '914422234'
+                "id": "41",
+                "name": "Tiago Pessoa",
+                "email": "",
+                "morada": "",
+                "phone": ""
             },
+            {
+                "id": "40",
+                "name": "Bruno Matos",
+                "email": "brdesign@gmail.com",
+                "morada": "",
+                "phone": "964261847"
+            },
+            {
+                "id": "39",
+                "name": "António Braga",
+                "email": "ajcbragafreetime@gmail.com",
+                "morada": "",
+                "phone": "917312602"
+            },
+            {
+                "id": "38",
+                "name": "Angelica Barros",
+                "email": "angelica-barros@live.com",
+                "morada": "",
+                "phone": "937813828"
+            },
+            {
+                "id": "37",
+                "name": "Celma de Almeida",
+                "email": "",
+                "morada": "",
+                "phone": ""
+            },
+            {
+                "id": "36",
+                "name": "Alexandra Ann",
+                "email": "",
+                "morada": "",
+                "phone": ""
+            },
+            {
+                "id": "35",
+                "name": "Ingrid Schild",
+                "email": "",
+                "morada": "",
+                "phone": ""
+            },
+            {
+                "id": "34",
+                "name": "Jeremias Antunes",
+                "email": "",
+                "morada": "",
+                "phone": ""
+            },
+            {
+                "id": "33",
+                "name": "Maria das Dores Folque",
+                "email": "",
+                "morada": "",
+                "phone": ""
+            },
+            {
+                "id": "32",
+                "name": "Jorge Pinho",
+                "email": "",
+                "morada": "",
+                "phone": ""
+            },
+            {
+                "id": "31",
+                "name": "João Espiga D'Almeida",
+                "email": "",
+                "morada": "",
+                "phone": ""
+            },
+            {
+                "id": "30",
+                "name": "João Sanches",
+                "email": "",
+                "morada": "",
+                "phone": ""
+            },
+            {
+                "id": "29",
+                "name": "Luis Cumbrera",
+                "email": "",
+                "morada": "",
+                "phone": ""
+            },
+            {
+                "id": "28",
+                "name": "Ricardo Drago",
+                "email": "",
+                "morada": "",
+                "phone": "0"
+            },
+            {
+                "id": "27",
+                "name": "Nuno Constantino",
+                "email": "",
+                "morada": "",
+                "phone": "0"
+            },
+            {
+                "id": "26",
+                "name": "Ricardo Mota",
+                "email": "",
+                "morada": "",
+                "phone": "0"
+            },
+            {
+                "id": "25",
+                "name": "Francis Lacour",
+                "email": "",
+                "morada": "",
+                "phone": "0"
+            },
+            {
+                "id": "24",
+                "name": "Carlos Nóbrega",
+                "email": "",
+                "morada": "",
+                "phone": "0"
+            },
+            {
+                "id": "23",
+                "name": "João Valle e Azevedo",
+                "email": "",
+                "morada": "",
+                "phone": "0"
+            },
+            {
+                "id": "22",
+                "name": "Nuno Cabral",
+                "email": "",
+                "morada": "",
+                "phone": "0"
+            },
+            {
+                "id": "21",
+                "name": "Marcelo Bittencourt",
+                "email": "",
+                "morada": "",
+                "phone": "0"
+            },
+            {
+                "id": "20",
+                "name": "Jose Antonio Vargas Lleras",
+                "email": "",
+                "morada": "",
+                "phone": "0"
+            },
+            {
+                "id": "19",
+                "name": "David Leigh-Howarth",
+                "email": "",
+                "morada": "",
+                "phone": "0"
+            },
+            {
+                "id": "18",
+                "name": "Sandro Marcos",
+                "email": "",
+                "morada": "",
+                "phone": "0"
+            },
+            {
+                "id": "17",
+                "name": "Rafael Paixão",
+                "email": "",
+                "morada": "",
+                "phone": "0"
+            },
+            {
+                "id": "16",
+                "name": "Javier Sabater",
+                "email": "",
+                "morada": "",
+                "phone": "0"
+            },
+            {
+                "id": "15",
+                "name": "Renato Ribeiro",
+                "email": "",
+                "morada": "",
+                "phone": "0"
+            },
+            {
+                "id": "14",
+                "name": "Andre Porcaro",
+                "email": "",
+                "morada": "",
+                "phone": "0"
+            },
+            {
+                "id": "13",
+                "name": "Maxime Senseby",
+                "email": "",
+                "morada": "",
+                "phone": "0"
+            },
+            {
+                "id": "12",
+                "name": "Christophe Maincourt",
+                "email": "",
+                "morada": "",
+                "phone": "0"
+            },
+            {
+                "id": "11",
+                "name": "Teun Hilte",
+                "email": "",
+                "morada": "",
+                "phone": "0"
+            },
+            {
+                "id": "9",
+                "name": "Rosário",
+                "email": "",
+                "morada": "",
+                "phone": "0"
+            },
+            {
+                "id": "8",
+                "name": "Rui Andrade",
+                "email": "",
+                "morada": "",
+                "phone": "0"
+            },
+            {
+                "id": "7",
+                "name": "Frederic Corre",
+                "email": "frederic.corre@axa-groupsolutions.com",
+                "morada": "",
+                "phone": "0"
+            },
+            {
+                "id": "6",
+                "name": "João Batalha",
+                "email": "joao.batalha@gmail.com",
+                "morada": "",
+                "phone": "912202013"
+            }
         ];
 
         return new Promise(function(resolve, reject) {

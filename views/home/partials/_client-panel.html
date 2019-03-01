@@ -7,50 +7,73 @@
     <!-- Main content -->
     <div class="home-client-container">
         <!-- Title -->
-        <h1>Detalhes</h1>
-        
-        <!-- Client data -->
-        <div class="row">
+        <div class="home-client-details-container">
+            <h1>Detalhes</h1>
             
-            <!-- name -->
-            <div class="col-xs-6">
-                <label>Nome</label>
-                <br>
-                <span>{{ view.selectedClient.name }}</span>
+            <!-- Client data -->
+            <div class="row">
+                
+                <!-- name -->
+                <div class="col-xs-6">
+                    <label>Nome</label>
+                    <br>
+                    <span>{{ view.selectedClient.name }}</span>
+                </div>
+                
+                <!-- email -->
+                <div class="col-xs-6">
+                    <label>E-mail</label>
+                    <br>
+                    <span>{{ view.selectedClient.email }}</span>
+                </div>
             </div>
-            
-            <!-- email -->
-            <div class="col-xs-6">
-                <label>E-mail</label>
-                <br>
-                <span>{{ view.selectedClient.email }}</span>
+
+            <br>
+
+            <div class="row">
+                <!-- address -->
+                <div class="col-xs-6">
+                    <label>Morada</label>
+                    <br>
+                    <span>{{ view.selectedClient.address }}</span>
+                </div>
+                
+                <!-- phone -->
+                <div class="col-xs-6">
+                    <label>Telemóvel</label>
+                    <br>
+                    <span>{{ view.selectedClient.phone }}</span>
+                </div>
             </div>
         </div>
-
-        <br>
-
-        <div class="row">
-            <!-- address -->
-            <div class="col-xs-6">
-                <label>Morada</label>
-                <br>
-                <span>{{ view.selectedClient.address }}</span>
-            </div>
-            
-            <!-- phone -->
-            <div class="col-xs-6">
-                <label>Telemóvel</label>
-                <br>
-                <span>{{ view.selectedClient.phone }}</span>
-            </div>
-        </div>
-
         <hr>
 
         <!-- Comments -->
         <div class="home-client-panel-comments-container">
             <h4>Comentários</h4>
+            
+            <div class="home-client-item" ng-repeat="">
+                
+            </div>
+    
+        </div>
 
+
+        <!-- Input -->
+        <div class="home-client-panel-comment-bar">
+            <div class="home-client-panel-comment-bar-container">
+                <!-- icon -->
+                <div class="home-client-panel-comment-bar-icon"><span><i class="fa fa-comment-o fa-2x"></i></span></div>
+                
+                <!-- input -->
+                <input placeholder="Adicionar comentário..." ng-model="view.commentText">
+            
+                <!-- clear -->
+                <div class="home-client-panel-comment-bar-clear" ng-if="view.commentText !== ''" ng-click="submitComment()">
+                <span><i class="fa fa-send fa-2x"></i></span>
+                </div>
+            
+            </div>
         </div>
 
     </div>
