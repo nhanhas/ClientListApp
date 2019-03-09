@@ -13,7 +13,7 @@ app
 		clientPanelOpened : false
 	};
 
-
+	
 
 	//#INITIALIZE Home data
 	$scope.initialize = function(){
@@ -76,6 +76,14 @@ app
 	/**
 	 * Behaviour functions
 	 */
+	
+    window.onpopstate = function () {
+		$timeout(()=>{
+			$scope.showPanel();
+		});		
+    };
+
+
 	//#A - Allow to show/hide panels (param <panel> = undefined, will close all)
 	$scope.showPanel = function(panel){
 		//#1 - First we reset all 'Opened' flags
@@ -92,8 +100,11 @@ app
 			case 'client-info':
 				$scope.view.clientPanelOpened = true;
 				break;		
+			default:
+				history.back();
+				break;
 		}
-
+		
 	}
 	//#A - When a client is clicked
 	$scope.onPressClientHandler = function(client){
@@ -105,12 +116,14 @@ app
 		return AppService.HOME_getClientInfo( clientParameter ).then((result)=>{		
 			//#2 - If we got client info
 			if(result && result.data){
-				//#2.1 - Show it				
+				//#2.1 - Show it			
+				history.pushState(null, null, location.href);	
 				$timeout(()=>{
 					$scope.view.selectedClient = result.data;
-					$scope.showPanel('client-info');
+					$scope.showPanel('client-info');		
+							
 				})		
-				
+								
 			}
 			
 		});
