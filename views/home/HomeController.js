@@ -79,13 +79,13 @@ app
 	
     window.onpopstate = function () {
 		$timeout(()=>{
-			$scope.showPanel();
+			$scope.showPanel(undefined, true);
 		});		
     };
 
 
 	//#A - Allow to show/hide panels (param <panel> = undefined, will close all)
-	$scope.showPanel = function(panel){
+	$scope.showPanel = function(panel, isBrowserPopState = false){
 		//#1 - First we reset all 'Opened' flags
 		$scope.view.clientPanelOpened = false;
 
@@ -101,7 +101,8 @@ app
 				$scope.view.clientPanelOpened = true;
 				break;		
 			default:
-				history.back();
+				if(!isBrowserPopState)
+					history.back();
 				break;
 		}
 		
