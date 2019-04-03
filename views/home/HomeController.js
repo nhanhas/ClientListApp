@@ -116,11 +116,11 @@ app
 		//#1 - Call Server to get client info
 		return AppService.HOME_getClientInfo( clientParameter ).then((result)=>{		
 			//#2 - If we got client info
-			if(result && result.data){
+			if(result){
 				//#2.1 - Show it			
 				history.pushState(null, null, location.href);	
 				$timeout(()=>{
-					$scope.view.selectedClient = result.data;
+					$scope.view.selectedClient = result;
 					$scope.showPanel('client-info');		
 							
 				})		
@@ -132,11 +132,39 @@ app
 	};
 
 	//#B - When Send comment is clicked
-	$scope.submitComment = function(client, commentary){
-		//#1 - Send TODO
+	$scope.submitComment = function(commentText){
+		//#1 - Send
+		let postCommentParameter = {
+			idclien : $scope.view.selectedClient.id,
+			comment : commentText,
+			user_id : 1 //for now
+		}
 
-		//#2 - Clear comment
-		$scope.view.commentText = '';
+		//#1 - Call Server to get client info
+		return AppService.HOME_saveCommentClient( postCommentParameter ).then((result)=>{	
+			console.log(result);	
+			//#2 - If we got client info
+			if(result){
+				//Call again to show comment				
+				return AppService.HOME_getClientInfo( {id : $scope.view.selectedClient.id } ).then((result)=>{		
+					console.log(result);
+					//#2 - If we got client info
+					if(result){
+						//#2.1 - Refresh it									
+						$timeout(()=>{
+							$scope.view.selectedClient = result;
+							$scope.showPanel('client-info');											
+						})												
+					}					
+				});
+			}
+
+				
+			//#2 - Clear comment
+			$scope.view.commentText = '';
+			
+		});
+
 	}
 
 	//#1 - Load Application Data from Server

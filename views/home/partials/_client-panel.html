@@ -70,7 +70,7 @@
                 <input placeholder="Adicionar comentário..." ng-model="view.commentText">
             
                 <!-- clear -->
-                <div class="home-client-panel-comment-bar-clear" ng-if="view.commentText !== ''" ng-click="submitComment()">
+                <div class="home-client-panel-comment-bar-clear" ng-if="view.commentText !== ''" ng-click="submitComment(view.commentText)">
                 <span><i class="fa fa-send fa-2x"></i></span>
                 </div>
             
