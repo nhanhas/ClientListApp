@@ -97,8 +97,9 @@
 	align-items: center;
 	background-color: #80808036;
 }
-.home-client-panel-comment-bar-container input{
-	width: 100%;
+.home-client-panel-comment-bar-container textarea{
+	padding-top: 20px;
+	width: 70%;
 	height: 60px;
     text-align: left; 
     background-color: rgba(0,0,0,0);
@@ -107,7 +108,7 @@
     font-size: 16px;
     color: #3a3a3a
 }
-.home-client-panel-comment-bar-container input:focus{
+.home-client-panel-comment-bar-container textarea:focus{
     outline: none;
 }
 

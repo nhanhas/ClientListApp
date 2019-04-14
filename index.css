@@ -7,3 +7,11 @@
 .fa-times-thin:before {
 	content: '\00d7';
 }
+
+/* Colors */
+.color-white{
+  color: white;
+}
+.background-normal-gray{
+  background-color: #808080b0;
+}

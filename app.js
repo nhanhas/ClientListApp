@@ -8,13 +8,17 @@ app
 	     when('/home', {
 	        templateUrl: 'views/home/home.html',
 	        controller: 'HomeController'
+				}).
+				when('/login', {
+	        templateUrl: 'views/login/login.html',
+	        controller: 'LoginController'
 	      }).
 	      when('/view2', {
 	        templateUrl: 'views/view2/view2.html',
 	        controller: 'View2Controller'
 	      }).
 	      otherwise({
-	        redirectTo: '/home'
+	        redirectTo: '/login'
 	      });
 	  }
 	])

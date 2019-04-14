@@ -1,0 +1,7 @@
+<!-- default -->
+<div class="custom-button-container custom-button-default color-white background-normal-gray" 
+     ng-click="onPressHandler()" 
+     ng-if="layout === 'default'"
+     ng-class="{'custom-button-disabled' : isDisabled}">
+    {{ label }} <span ng-if="icon !== ''">&nbsp;<i class="fa {{icon}}"></i></span>
+</div>
